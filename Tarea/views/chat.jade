@@ -1,0 +1,25 @@
+extends layout
+block content
+  head
+    title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='/socket.io/socket.io.js')
+    script(src='//code.jquery.com/jquery-1.11.3.min.js')
+    script.
+      var socket = io();
+      function sendFunction() {
+      socket.emit('new message', $('#new-message').val());
+      $('#new-message').val('');
+      }
+      socket.on('chat message', function(msg){
+      $('#messages-area').append($('<li>').text(msg));
+      });
+
+
+  html
+    body
+      h1 Chat
+      ul#messages-area
+      form#form(onsubmit='return false;')
+        input#new-message(type='text')
+        button(onclick='sendFunction()') Send

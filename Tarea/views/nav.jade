@@ -1,0 +1,22 @@
+nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  a.navbar-brand(href='/') Soft Consulting
+  button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  #navbarSupportedContent.collapse.navbar-collapse
+    ul.navbar-nav.mr-auto
+      li.nav-item.active
+        a.nav-link(href='/')
+          | Inicio 
+          span.sr-only (current)
+      li.nav-item
+        a.nav-link(href='/formulario') Crear cuenta
+      li.nav-item
+        a.nav-link(href='/inicio') Iniciar Sesion
+      li.nav-item
+        a.nav-link.disabled(href='/chat') Chat
+      if isAuthenticated    
+          li.nav-item
+            a.nav-link.disabled(href='logout') Cerrar Sesion
+              
+      
+
