@@ -18,7 +18,7 @@
 var connection = {
   host     : 'localhost',
   user     : 'root',
-  password : '',
+  password : '189176791',
   database : 'proyecto'
 };
 /*connection.connect(function(err){
