@@ -23,6 +23,12 @@ router.post('/inicio', passport.authenticate('local',{
 router.get('/logout', controllers.UserController.logout);
 router.get('/perfil',AuthMiddleware.isLogged ,controllers.UserController.perfil);
 
+router.get('/sesiones', function(req, res){
+  res.render('sesiones', {
+    title: 'sesiones'
+  });
+});
+
 /* GET home page. */
 /*router.get('/', function(req, res, next) {
   req.session.visitas || (req.session.visitas=0)
