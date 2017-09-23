@@ -28,6 +28,7 @@ router.get('/sesiones', function(req, res){
     title: 'sesiones'
   });
 });
+router.get('/Sesion', controllers.UserController.Sesion);
 
 /* GET home page. */
 /*router.get('/', function(req, res, next) {

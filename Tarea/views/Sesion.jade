@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  if isAuthenticated
+    <center><h2>Nueva Sesión</h2></center>
+    br
+    <center><a href="/sesiones"><img src="http://s.pcspucv.cl/wp-content/uploads/2017/09/Imagen1.png" onmouseover="this.src='http://s.pcspucv.cl/wp-content/uploads/2017/09/Imagen2.png';" onmouseout="this.src='http://s.pcspucv.cl/wp-content/uploads/2017/09/Imagen1.png';"/></a></center>
+    br
+    br
+    <center><h2>Mis Sesiones</h2></center>
+    br
+    <img src="http://s.pcspucv.cl/wp-content/uploads/2017/09/Imagen1.png" onmouseover="this.src='http://s.pcspucv.cl/wp-content/uploads/2017/09/Imagen2.png';" onmouseout="this.src='http://s.pcspucv.cl/wp-content/uploads/2017/09/Imagen1.png';"/>

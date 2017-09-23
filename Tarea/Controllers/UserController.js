@@ -45,6 +45,10 @@ module.exports = {
 			isAuthenticated : req.isAuthenticated(),
 			user : req.user
 		})
+	},
+
+	Sesion : function(req,res,next){
+		return res.render('Sesion',{title : ' Nueva sesion'});
 	}
 
 
