@@ -18,6 +18,7 @@ var passport = require('passport');
 require('./passport/passport')(passport);
 
 var chat = require('./routes/chat');
+var sesiones = require('./routes/sesiones');
 
 var app = express();
 app.use(cookieParser());
@@ -50,6 +51,7 @@ app.use('/users', users);
 app.use('/usuario', usuario);
 //app.use('/formulario', formulario );
 app.use('/chat', chat);
+app.use('/sesiones', sesiones);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
