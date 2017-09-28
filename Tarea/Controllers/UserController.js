@@ -48,7 +48,15 @@ module.exports = {
 	},
 
 	Sesion : function(req,res,next){
-		return res.render('Sesion',{title : ' Nueva sesion'});
+
+		res.render('Sesion', {
+			isAuthenticated : req.isAuthenticated(),
+			user : req.user
+		})
+	},
+
+	CreateSession : function(req,res,next){
+		return res.render('aca/crearSesion');
 	}
 
 

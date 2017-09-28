@@ -23,12 +23,10 @@ router.post('/inicio', passport.authenticate('local',{
 router.get('/logout', controllers.UserController.logout);
 router.get('/perfil',AuthMiddleware.isLogged ,controllers.UserController.perfil);
 
-router.get('/sesiones', function(req, res){
-  res.render('sesiones', {
-    title: 'sesiones'
-  });
-});
-router.get('/Sesion', controllers.UserController.Sesion);
+
+router.get('/Sesion', AuthMiddleware.isLogged, controllers.UserController.Sesion);
+router.get('/Crearsesion',  controllers.UserController.CreateSession);
+
 
 /* GET home page. */
 /*router.get('/', function(req, res, next) {

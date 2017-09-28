@@ -7,7 +7,7 @@ var mysql      = require('mysql');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  	res.render('formulario', { title: 'Rellenar formulario '});
+  	res.render('crearSesion', { title: 'Rellenar formulario '});
 });
 
 
